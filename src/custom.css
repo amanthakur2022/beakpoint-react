@@ -1,0 +1,24 @@
+body {
+  font-family: sans-serif;
+}
+
+button {
+  border-radius: 30px !important;
+  padding: 10px 20px !important;
+}
+
+button:not(header button) {
+  padding: 18px 36px !important;
+}
+
+p {
+  color: #666666;
+  line-height: 1.5rem;
+}
+
+.hero-section {
+  height: 95vh;
+  background-image: url("https://validthemes.net/site-template/anada/assets/img/bg-2.png");
+  background-size: cover;
+  background-color: #f4f7fc;
+}
