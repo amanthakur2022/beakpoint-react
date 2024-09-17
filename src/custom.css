@@ -16,9 +16,15 @@ p {
   line-height: 1.5rem;
 }
 
+section{
+  padding: 100px 0px;
+}
+
 .hero-section {
-  height: 95vh;
+  padding: 0px;
   background-image: url("https://validthemes.net/site-template/anada/assets/img/bg-2.png");
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
   background-color: #f4f7fc;
 }
+
