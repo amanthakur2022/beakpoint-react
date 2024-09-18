@@ -28,6 +28,15 @@ p {
   line-height: 1.5rem;
 }
 
+/* material override css */
+.MuiAccordion-root {
+  margin: 15px 0px;
+}
+
+.MuiAccordionSummary-content {
+  margin: 20px 0px !important;
+}
+
 /* homepage css */
 .hero-section {
   padding: 0px;
@@ -43,15 +52,6 @@ p {
   overflow: hidden;
 }
 
-/* material override css */
-.MuiAccordion-root {
-  margin: 15px 0px;
-}
-
-.MuiAccordionSummary-content {
-  margin: 20px 0px !important;
-}
-
 /* animations */
 @keyframes rotate-animation {
   0% {
@@ -61,6 +61,7 @@ p {
   50% {
     transform: rotate(180deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
