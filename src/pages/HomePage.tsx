@@ -69,7 +69,9 @@ const HomePage = () => {
 
   return (
     <>
+      {/* navbar */}
       <ResponsiveAppBar></ResponsiveAppBar>
+
       {/* hero section */}
       <section className="hero-section">
         <Container maxWidth="lg">
@@ -134,6 +136,8 @@ const HomePage = () => {
           </Box>
         </Container>
       </section>
+      {/* hero section */}
+
       {/* why choose us */}
       <section>
         <Container maxWidth="lg">
@@ -367,6 +371,7 @@ const HomePage = () => {
         </Container>
       </section>
       {/* why choose us */}
+
       {/* services */}
       <section className="services-section">
         <img
@@ -544,6 +549,8 @@ const HomePage = () => {
           </Box>
         </Container>
       </section>
+      {/* services */}
+
       {/* faq */}
       <section>
         <Container maxWidth="lg">
@@ -644,6 +651,8 @@ const HomePage = () => {
           </Box>
         </Container>
       </section>
+      {/* faq */}
+
       {/* footer */}
       <ResponsiveFooter></ResponsiveFooter>
     </>
