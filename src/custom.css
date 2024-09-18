@@ -2,6 +2,18 @@ body {
   font-family: sans-serif;
 }
 
+footer {
+  padding: 30px 0px;
+  background-image: url("./assets/footer-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+section {
+  padding: 100px 0px;
+}
+
 button {
   border-radius: 30px !important;
   padding: 10px 20px !important;
@@ -16,10 +28,7 @@ p {
   line-height: 1.5rem;
 }
 
-section{
-  padding: 100px 0px;
-}
-
+/* homepage css */
 .hero-section {
   padding: 0px;
   background-image: url("https://validthemes.net/site-template/anada/assets/img/bg-2.png");
@@ -28,3 +37,32 @@ section{
   background-color: #f4f7fc;
 }
 
+.services-section {
+  background-color: aliceblue;
+  position: relative;
+  overflow: hidden;
+}
+/* homepage css */
+
+/* material override css */
+.MuiAccordion-root {
+  margin: 15px 0px;
+}
+
+.MuiAccordionSummary-content {
+  margin: 20px 0px !important;
+}
+
+/* animations */
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

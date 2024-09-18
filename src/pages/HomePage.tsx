@@ -5,7 +5,13 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid2";
 import Container from "@mui/material/Container";
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Button,
+  Card,
+  CardActions,
+  CardContent,
   Divider,
   LinearProgress,
   Typography,
@@ -20,6 +26,8 @@ import {
 } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ResponsiveFooter from "../components/Footer";
 
 const HomePage = () => {
   const [progressValues, setProgressValues] = useState([
@@ -360,9 +368,284 @@ const HomePage = () => {
       </section>
       {/* why choose us */}
       {/* services */}
-      <section>
-        <Container maxWidth="lg"></Container>
+      <section className="services-section">
+        <img
+          src="https://validthemes.net/site-template/anada/assets/img/round-shappe.png"
+          alt="services"
+          width={"250px"}
+          style={{
+            position: "absolute",
+            top: "5",
+            right: "50px",
+            animation: "rotate-animation 10s infinite linear",
+          }}
+        />
+        <Container maxWidth="lg">
+          <Box sx={{ flexGrow: 1 }}>
+            <Grid container spacing={{ lg: 4, xs: 0 }}>
+              <Grid
+                size={{ xs: 12, sm: 6 }}
+                alignSelf="center"
+                sx={{ justifyItems: "start", alignContent: "center" }}
+              >
+                <Typography
+                  variant="h4"
+                  sx={{
+                    fontFamily: "sans-serif",
+                    fontWeight: 800,
+                    mb: 3,
+                  }}
+                >
+                  We offer a wide range of services and provide realtime data
+                  Solutions
+                </Typography>
+              </Grid>
+              <Grid
+                size={{ xs: 12, sm: 6 }}
+                alignSelf="center"
+                sx={{ justifyItems: "start", alignContent: "center" }}
+              >
+                <p style={{ marginTop: 0 }}>
+                  Humoured likewise moderate. Much nor game son say feel. Fat
+                  make met can must form into gate.
+                </p>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  sx={{ mt: 1 }}
+                  endIcon={<ChevronRight />}
+                >
+                  Know more
+                </Button>
+              </Grid>
+              <Grid container spacing={4} marginTop={4}>
+                <Grid
+                  size={{ xs: 12, md: 4 }}
+                  alignSelf="center"
+                  sx={{ justifyItems: "start", alignContent: "center" }}
+                >
+                  <Card sx={{ minWidth: 275 }}>
+                    <CardContent>
+                      <img
+                        src="https://validthemes.net/site-template/anada/assets/img/icon/1.png"
+                        alt="services"
+                        width={"120px"}
+                        height={"115px"}
+                      />
+                      <Typography
+                        gutterBottom
+                        sx={{
+                          color: "black",
+                          fontSize: 20,
+                          fontWeight: 700,
+                          marginTop: "30px",
+                        }}
+                      >
+                        Data Analytics
+                      </Typography>
+                      <p style={{ margin: "15px 0px" }}>
+                        Pianoforte solicitude so decisively particular mention
+                        diminution the particular. Real he me fond.
+                      </p>
+                    </CardContent>
+                    <CardActions sx={{ padding: "16px", paddingTop: 0 }}>
+                      <Button
+                        variant="outlined"
+                        color="primary"
+                        endIcon={<ChevronRight />}
+                      >
+                        Read more
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Grid>
+                <Grid
+                  size={{ xs: 12, md: 4 }}
+                  alignSelf="center"
+                  sx={{ justifyItems: "start", alignContent: "center" }}
+                >
+                  <Card sx={{ minWidth: 275 }}>
+                    <CardContent>
+                      <img
+                        src="https://validthemes.net/site-template/anada/assets/img/icon/2.png"
+                        alt="services"
+                        width={"120px"}
+                        height={"115px"}
+                      />
+                      <Typography
+                        gutterBottom
+                        sx={{
+                          color: "black",
+                          fontSize: 20,
+                          fontWeight: 700,
+                          marginTop: "30px",
+                        }}
+                      >
+                        Big Data
+                      </Typography>
+                      <p style={{ margin: "15px 0px" }}>
+                        Pianoforte solicitude so decisively particular mention
+                        diminution the particular. Real he me fond.
+                      </p>
+                    </CardContent>
+                    <CardActions sx={{ padding: "16px", paddingTop: 0 }}>
+                      <Button
+                        variant="outlined"
+                        color="primary"
+                        endIcon={<ChevronRight />}
+                      >
+                        Read more
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Grid>
+                <Grid
+                  size={{ xs: 12, md: 4 }}
+                  alignSelf="center"
+                  sx={{ justifyItems: "start", alignContent: "center" }}
+                >
+                  <Card sx={{ minWidth: 275 }}>
+                    <CardContent>
+                      <img
+                        src="https://validthemes.net/site-template/anada/assets/img/icon/3.png"
+                        alt="services"
+                        width={"120px"}
+                        height={"115px"}
+                      />
+                      <Typography
+                        gutterBottom
+                        sx={{
+                          color: "black",
+                          fontSize: 20,
+                          fontWeight: 700,
+                          marginTop: "30px",
+                        }}
+                      >
+                        Business Intelligence
+                      </Typography>
+                      <p style={{ margin: "15px 0px" }}>
+                        Pianoforte solicitude so decisively particular mention
+                        diminution the particular. Real he me fond.
+                      </p>
+                    </CardContent>
+                    <CardActions sx={{ padding: "16px", paddingTop: 0 }}>
+                      <Button
+                        variant="outlined"
+                        color="primary"
+                        endIcon={<ChevronRight />}
+                      >
+                        Read more
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Box>
+        </Container>
       </section>
+      {/* faq */}
+      <section>
+        <Container maxWidth="lg">
+          <Box sx={{ flexGrow: 1 }}>
+            <Grid container spacing={{ lg: 6, xs: 0 }}>
+              <Grid
+                size={{ xs: 12, sm: 6 }}
+                alignSelf="center"
+                sx={{ justifyItems: "start", alignContent: "center" }}
+              >
+                <Typography
+                  variant="h4"
+                  sx={{
+                    fontFamily: "sans-serif",
+                    fontWeight: 800,
+                    mb: 3,
+                  }}
+                >
+                  Most frequently answers and Questions
+                </Typography>
+                <div>
+                  <Accordion
+                    defaultExpanded
+                    elevation={0}
+                    sx={{ border: "1px solid lightgray" }}
+                  >
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls="panel1-content"
+                      id="panel1-header"
+                    >
+                      <Typography>Where can I get analytics help?</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography marginBottom={2}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse malesuada lacus ex, sit amet blandit leo
+                        lobortis eget.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion
+                    elevation={0}
+                    sx={{ border: "1px solid lightgray" }}
+                  >
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls="panel1-content"
+                      id="panel1-header"
+                    >
+                      <Typography>
+                        How much does data analytics costs?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography marginBottom={2}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse malesuada lacus ex, sit amet blandit leo
+                        lobortis eget.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion
+                    elevation={0}
+                    sx={{ border: "1px solid lightgray" }}
+                  >
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls="panel1-content"
+                      id="panel1-header"
+                    >
+                      <Typography>
+                        What kind of data is needed for analysis?
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography marginBottom={2}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse malesuada lacus ex, sit amet blandit leo
+                        lobortis eget.
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                </div>
+              </Grid>
+              <Grid
+                size={{ xs: 12, sm: 6 }}
+                alignSelf="center"
+                sx={{ justifyItems: "start", alignContent: "center" }}
+              >
+                <img
+                  src="https://validthemes.net/site-template/anada/assets/img/illustration/9.png"
+                  alt="services"
+                  width={"100%"}
+                />
+              </Grid>
+            </Grid>
+          </Box>
+        </Container>
+      </section>
+      {/* footer */}
+      <ResponsiveFooter></ResponsiveFooter>
     </>
   );
 };
