@@ -232,13 +232,20 @@ const HomePage = () => {
                     flexDirection: "column",
                   }}
                 >
-                  <Item style={{ display: "flex", gap: "20px" }} elevation={0}>
+                  <Item
+                    sx={{
+                      gap: "20px",
+                      display: "flex",
+                      flexDirection: { xs: "column", md: "row" },
+                    }}
+                    elevation={0}
+                  >
                     <Item
                       sx={{
                         padding: "15px",
                         display: "flex",
                         alignItems: "center",
-                        width: "100%",
+                        width: { xs: "auto", md: "100%" },
                         backgroundColor: "aliceblue",
                       }}
                     >
@@ -257,7 +264,7 @@ const HomePage = () => {
                         padding: "15px",
                         display: "flex",
                         alignItems: "center",
-                        width: "100%",
+                        width: { xs: "auto", md: "100%" },
                         backgroundColor: "aliceblue",
                       }}
                     >
@@ -275,13 +282,20 @@ const HomePage = () => {
                       </Typography>
                     </Item>
                   </Item>
-                  <Item style={{ display: "flex", gap: "20px" }} elevation={0}>
+                  <Item
+                    elevation={0}
+                    sx={{
+                      gap: "20px",
+                      display: "flex",
+                      flexDirection: { xs: "column", md: "row" },
+                    }}
+                  >
                     <Item
                       sx={{
                         padding: "15px",
                         display: "flex",
                         alignItems: "center",
-                        width: "100%",
+                        width: { xs: "auto", md: "100%" },
                         backgroundColor: "aliceblue",
                       }}
                     >
@@ -300,7 +314,7 @@ const HomePage = () => {
                         padding: "15px",
                         display: "flex",
                         alignItems: "center",
-                        width: "100%",
+                        width: { xs: "auto", md: "100%" },
                         backgroundColor: "aliceblue",
                       }}
                     >
@@ -318,13 +332,20 @@ const HomePage = () => {
                       </Typography>
                     </Item>
                   </Item>
-                  <Item style={{ display: "flex", gap: "20px" }} elevation={0}>
+                  <Item
+                    elevation={0}
+                    sx={{
+                      gap: "20px",
+                      display: "flex",
+                      flexDirection: { xs: "column", md: "row" },
+                    }}
+                  >
                     <Item
                       sx={{
                         padding: "15px",
                         display: "flex",
                         alignItems: "center",
-                        width: "100%",
+                        width: { xs: "auto", md: "100%" },
                         backgroundColor: "aliceblue",
                       }}
                     >
@@ -346,7 +367,7 @@ const HomePage = () => {
                         padding: "15px",
                         display: "flex",
                         alignItems: "center",
-                        width: "100%",
+                        width: { xs: "auto", md: "100%" },
                         backgroundColor: "aliceblue",
                       }}
                     >
