@@ -69,7 +69,7 @@ const HomePage = () => {
               <Grid
                 size={{ xs: 12, sm: 6 }}
                 alignSelf="center"
-                height={{ xs: "55vh", md: "90vh" }}
+                height={{ xs: "70vh", md: "90vh" }}
                 sx={{
                   justifyItems: "start",
                   alignContent: "center",
@@ -171,7 +171,7 @@ const HomePage = () => {
               >
                 <Box sx={{ width: "100%" }}>
                   {progressValues.map((progress, index) => (
-                    <Box key={index} mb={2}>
+                    <Box key={index} mb={3}>
                       <Paper
                         sx={{
                           display: "flex",
@@ -181,7 +181,9 @@ const HomePage = () => {
                         }}
                         elevation={0}
                       >
-                        <Typography>{progress.label}</Typography>
+                        <Typography marginBottom={1}>
+                          {progress.label}
+                        </Typography>
                         <Typography>{Math.round(progress.value)}%</Typography>
                       </Paper>
                       <LinearProgress
@@ -565,7 +567,7 @@ const HomePage = () => {
       <section>
         <Container maxWidth="lg">
           <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={{ lg: 6, xs: 0 }}>
+            <Grid container spacing={{ sm: 6, xs: 0 }}>
               <Grid
                 size={{ xs: 12, sm: 6 }}
                 alignSelf="center"

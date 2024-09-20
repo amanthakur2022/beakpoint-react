@@ -2,10 +2,6 @@ body {
   font-family: sans-serif;
 }
 
-.bg-white{
-  color: white;
-}
-
 footer {
   padding: 30px 0px;
   background-image: url("./assets/footer-bg.png");
@@ -39,13 +35,6 @@ p {
 
 .MuiAccordionSummary-content {
   margin: 20px 0px !important;
-}
-
-.bg-light-primary{
- background-color:#f4f7fc;
-}
-.bg-transparent{
-  background-color: red;
 }
 
 /* homepage css */
