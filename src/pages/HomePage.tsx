@@ -42,9 +42,9 @@ const HomePage = () => {
     const timers = progressValues.map(
       (progress, index) =>
         setTimeout(() => {
-          setProgressValues((prev) =>
-            prev.map((p, i) =>
-              i === index ? { ...p, value: updatedValues[i] } : p
+          setProgressValues((value) =>
+            value.map((item, i) =>
+              i === index ? { ...item, value: updatedValues[i] } : item
             )
           );
         }, (index + 1) * 1000) // Delay increases for each progress bar
@@ -55,17 +55,6 @@ const HomePage = () => {
       timers.forEach((timer) => clearTimeout(timer));
     };
   }, []);
-
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-    ...theme.applyStyles("dark", {
-      backgroundColor: "#1A2027",
-    }),
-  }));
 
   return (
     <>
@@ -183,7 +172,7 @@ const HomePage = () => {
                 <Box sx={{ width: "100%" }}>
                   {progressValues.map((progress, index) => (
                     <Box key={index} mb={2}>
-                      <Item
+                      <Paper
                         sx={{
                           display: "flex",
                           justifyContent: "space-between",
@@ -194,7 +183,7 @@ const HomePage = () => {
                       >
                         <Typography>{progress.label}</Typography>
                         <Typography>{Math.round(progress.value)}%</Typography>
-                      </Item>
+                      </Paper>
                       <LinearProgress
                         variant="determinate"
                         className="rounded"
@@ -232,7 +221,7 @@ const HomePage = () => {
                     flexDirection: "column",
                   }}
                 >
-                  <Item
+                  <Paper
                     sx={{
                       gap: "20px",
                       display: "flex",
@@ -240,7 +229,7 @@ const HomePage = () => {
                     }}
                     elevation={0}
                   >
-                    <Item
+                    <Paper
                       sx={{
                         padding: "15px",
                         display: "flex",
@@ -258,8 +247,8 @@ const HomePage = () => {
                       <Typography component="small" fontWeight={700}>
                         Data Cleaning
                       </Typography>
-                    </Item>
-                    <Item
+                    </Paper>
+                    <Paper
                       sx={{
                         padding: "15px",
                         display: "flex",
@@ -280,9 +269,9 @@ const HomePage = () => {
                       <Typography component="small" fontWeight={700}>
                         API Integration Service
                       </Typography>
-                    </Item>
-                  </Item>
-                  <Item
+                    </Paper>
+                  </Paper>
+                  <Paper
                     elevation={0}
                     sx={{
                       gap: "20px",
@@ -290,7 +279,7 @@ const HomePage = () => {
                       flexDirection: { xs: "column", md: "row" },
                     }}
                   >
-                    <Item
+                    <Paper
                       sx={{
                         padding: "15px",
                         display: "flex",
@@ -308,8 +297,8 @@ const HomePage = () => {
                       <Typography component="small" fontWeight={700}>
                         Table Storage
                       </Typography>
-                    </Item>
-                    <Item
+                    </Paper>
+                    <Paper
                       sx={{
                         padding: "15px",
                         display: "flex",
@@ -330,9 +319,9 @@ const HomePage = () => {
                       <Typography component="small" fontWeight={700}>
                         SQL Database
                       </Typography>
-                    </Item>
-                  </Item>
-                  <Item
+                    </Paper>
+                  </Paper>
+                  <Paper
                     elevation={0}
                     sx={{
                       gap: "20px",
@@ -340,7 +329,7 @@ const HomePage = () => {
                       flexDirection: { xs: "column", md: "row" },
                     }}
                   >
-                    <Item
+                    <Paper
                       sx={{
                         padding: "15px",
                         display: "flex",
@@ -361,8 +350,8 @@ const HomePage = () => {
                       <Typography component="small" fontWeight={700}>
                         Applicatication Services
                       </Typography>
-                    </Item>
-                    <Item
+                    </Paper>
+                    <Paper
                       sx={{
                         padding: "15px",
                         display: "flex",
@@ -383,8 +372,8 @@ const HomePage = () => {
                       <Typography component="small" fontWeight={700}>
                         Data Quality Audit
                       </Typography>
-                    </Item>
-                  </Item>
+                    </Paper>
+                  </Paper>
                 </div>
               </Grid>
             </Grid>
